@@ -53,11 +53,10 @@
                                     <th>CPF ou CNPJ</th>
                                     <th>E-mail</th>
                                     <th>Cidade</th>
-                                    <th>Estado</th>
+                                    <th>UF</th>
                                     <th>Editar</th>
                                     <th>Excluir</th>
                                 </tr>
-                                <!-- Nome das colunas -->
                             </thead>
 
                             <% try { ColaboradorDAO objcolaboradorDAO=new ColaboradorDAO();
@@ -80,7 +79,7 @@
                                             <%out.print(lista.get(num).getEmail() + "</td>");
                                                 %>
                                         <td>
-                                            <% out.print(lista.get(num).getCidade() + "</td>");
+                                            <%out.print(lista.get(num).getCidade() + "</td>");
                                                 %>
                                         <td>
                                             <%out.print(lista.get(num).getUf() + "</td>");
@@ -92,11 +91,10 @@
                             + lista.get(num).getCpf() + "&cnpj="
                             + lista.get(num).getCnpj() + "&email="
                             + lista.get(num).getEmail() + "&cep="
-                            + lista.get(num).getCep() + "&endereco="
-                            + lista.get(num).getEndereco()+ "&logradouro="
-                            + lista.get(num).getLogradouro()+ "&bairro="
-                            + lista.get(num).getBairro()+ "&cidade="
-                            + lista.get(num).getCidade()+ "&estado="
+                            + lista.get(num).getCep() + "&logradouro="
+                            + lista.get(num).getLogradouro() + "&bairro="
+                            + lista.get(num).getBairro() + "&cidade="
+                            + lista.get(num).getCidade() + "&estado="
                             + lista.get(num).getUf() + "&tipoPessoa="
                             + lista.get(num).getTipoPessoa() + "'> Editar</a>" + "</td>");
                                         %><td>
@@ -106,26 +104,17 @@
                             + lista.get(num).getCpf() + "&cnpj="
                             + lista.get(num).getCnpj() + "&email="
                             + lista.get(num).getEmail() + "&cep="
-                            + lista.get(num).getCep() + "&endereco="
-                            + lista.get(num).getEndereco()+ "&logradouro="
+                            + lista.get(num).getCep() + "&logradouro="
                             + lista.get(num).getLogradouro()+ "&bairro="
-                            + lista.get(num).getBairro()+ "&cidade="
-                            + lista.get(num).getCidade()+ "&estado="
+                            + lista.get(num).getBairro() + "&cidade="
+                            + lista.get(num).getCidade() + "&estado="
                             + lista.get(num).getUf() + "&tipoPessoa="
                             + lista.get(num).getTipoPessoa() + "'> Excluir</a>" + "</td>");
                                         %>
 
                                 </tr>
                                 <%} } catch (Exception e) { } %>
-
-                                            <!-- Adicionando JQuery -->
-                                    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
-                                    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-                                    crossorigin="anonymous"></script>
-                                    <script defer
-                                        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-                                    <script defer
-                                        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+                                
                     </div>
                 </div>
 

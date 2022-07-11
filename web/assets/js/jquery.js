@@ -2,14 +2,22 @@
 
 $(document).ready(function () {
   $(".box").hide();
+
   $('input[type="radio"]').click(function () {
-      var inputValue = $(this).attr("value");
-      var targetBox = $("." + inputValue);
-      $(".box").not(targetBox).hide();
-      $(targetBox).show();
+    var inputValue = $(this).attr("value");
+    var targetBox = $("." + inputValue);
+    $(".box").not(targetBox).hide();
+    $(targetBox).show();
+
+    if (inputValue == "PessoaFisica") {
+      $("#cpf").attr("required", true);
+      $("#cnpj").removeAttr("required");
+    } else if (inputValue == "PessoaJuridica") {
+      $("#cnpj").attr("required", true);
+      $("#cpf").removeAttr("required");
+    }
   });
 });
-
 
 // Requisição API viacep
 
@@ -21,7 +29,6 @@ $(document).ready(function() {
       $("#bairro").val("");
       $("#cidade").val("");
       $("#estado").val("");
-
   }
   
   //Quando o campo cep perde o foco.
@@ -76,6 +83,10 @@ $(document).ready(function() {
   });
 });
 
-function validation() {
-    window.location.href="/CadastroColaboradores/ListarColaborador.jsp";
-}
+// Máscara
+
+$(document).ready(function () {
+    $("#cep").mask("99999-999");
+    $("#cpf").mask('000.000.000-00', {reverse: true});
+    $("#cnpj").mask('00.000.000/0000-00', {reverse: true});
+});

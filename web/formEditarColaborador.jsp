@@ -86,18 +86,19 @@
                        </div>
                 </div>
 
+
                 <div class="form-group row row-cols-2">
                      <legend class="col-md-4 col-form-label text-md-right">Tipo de Pessoa</legend>
                      <div class="cols-8">
                          <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" value="Pessoa Fisica" id="pessoaFisica"
+                             <input class="form-check-input" type="radio" value="PessoaFisica" id="pessoaFisica"
                              name="<%=request.getParameter("tipoPessoa")%>">
                              <label for="labelPessoaFisica" class="form-check-label">Pessoa
                                  Física</label>
                          </div>
 
                          <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" value="Pessoa Juridica" 
+                             <input class="form-check-input" type="radio" value="PessoaJuridica" 
                                  id="pessoaJuridica" name="<%=request.getParameter("tipoPessoa")%>">
                              <label for="labelPessoaJuridica" class="form-check-label">Pessoa
                                  Jurídica</label>
@@ -105,14 +106,14 @@
                      </div>
                  </div>
 
-                 <div class="form-group row">
+                 <div class="form-group row box">
                      <label for="labelCPF" class="col-md-4 col-form-label text-md-right">CPF</label>
                      <div class="col-md-6">
                          <input type="text" id="cpf" class="form-control" name="cpf" value="<%=request.getParameter("cpf")%>">
                      </div>
                  </div>
 
-                 <div class="form-group row">
+                 <div class="form-group row box">
                      <label for="labelCNPJ" class="col-md-4 col-form-label text-md-right">CNPJ</label>
                      <div class="col-md-6">
                          <input type="text" id="cnpj" class="form-control" name="cnpj" value="<%=request.getParameter("cpnj")%>">
@@ -170,5 +171,8 @@
         </div>
       </div>
     </main>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="./assets/js/jquery.js"></script>
   </body>
 </html>

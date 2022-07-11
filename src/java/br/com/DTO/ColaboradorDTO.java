@@ -4,7 +4,7 @@ package br.com.DTO;
 public class ColaboradorDTO {
     
 
-    private String nome, cpf, cnpj, email, cep, endereco, logradouro, bairro, cidade, estado, tipoPessoa;
+    private String nome, cpf, cnpj, email, cep, logradouro, bairro, cidade, estado, tipoPessoa;
     private int id;
     
     public String getNome() {
@@ -45,14 +45,6 @@ public class ColaboradorDTO {
 
     public void setCep(String cep) {
         this.cep = cep;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
     }
 
     public String getLogradouro() {

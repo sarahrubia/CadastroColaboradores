@@ -16,8 +16,8 @@ public class ColaboradorDAO {
 
     public void cadastrarColaborador(ColaboradorDTO objcolaboradorDTO) throws ClassNotFoundException {
         String sql = "insert into colaboradores "
-                + "(nome, cpf, cnpj, email, cep, endereco, logradouro, bairro, cidade, estado, tipoPessoa) "
-                + "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                + "(nome, cpf, cnpj, email, cep, logradouro, bairro, cidade, estado, tipoPessoa) "
+                + "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         conexao = new ConexaoDAO().conectaBD();
 
@@ -28,12 +28,11 @@ public class ColaboradorDAO {
             pstm.setString(3, objcolaboradorDTO.getCnpj());
             pstm.setString(4, objcolaboradorDTO.getEmail());
             pstm.setString(5, objcolaboradorDTO.getCep());
-            pstm.setString(6, objcolaboradorDTO.getEndereco());
-            pstm.setString(7, objcolaboradorDTO.getLogradouro());
-            pstm.setString(8, objcolaboradorDTO.getBairro());
-            pstm.setString(9, objcolaboradorDTO.getCidade());
-            pstm.setString(10, objcolaboradorDTO.getUf());
-            pstm.setString(11, objcolaboradorDTO.getTipoPessoa());
+            pstm.setString(6, objcolaboradorDTO.getLogradouro());
+            pstm.setString(7, objcolaboradorDTO.getBairro());
+            pstm.setString(8, objcolaboradorDTO.getCidade());
+            pstm.setString(9, objcolaboradorDTO.getUf());
+            pstm.setString(10, objcolaboradorDTO.getTipoPessoa());
 
             pstm.execute();
             pstm.close();
@@ -58,7 +57,6 @@ public class ColaboradorDAO {
                 objcolaboradorDTO.setCnpj(rs.getString("cnpj"));
                 objcolaboradorDTO.setEmail(rs.getString("email"));
                 objcolaboradorDTO.setCep(rs.getString("cep"));
-                objcolaboradorDTO.setEndereco(rs.getString("endereco"));
                 objcolaboradorDTO.setLogradouro(rs.getString("logradouro"));
                 objcolaboradorDTO.setBairro(rs.getString("bairro"));
                 objcolaboradorDTO.setCidade(rs.getString("cidade"));
@@ -76,7 +74,7 @@ public class ColaboradorDAO {
     
     public void EditarColaborador(ColaboradorDTO objcolaboradorDTO) throws ClassNotFoundException {
         
-        String sql = "update colaboradores set nome = ?, cpf = ?, cnpj = ?, email = ?, cep = ?, endereco = ?, logradouro = ?, bairro = ?, cidade = ?, estado = ?, tipoPessoa = ? where id = ?";
+        String sql = "update colaboradores set nome = ?, cpf = ?, cnpj = ?, email = ?, cep = ?, logradouro = ?, bairro = ?, cidade = ?, estado = ?, tipoPessoa = ? where id = ?";
         
         conexao = new ConexaoDAO().conectaBD();
         
@@ -87,13 +85,12 @@ public class ColaboradorDAO {
             pstm.setString(3, objcolaboradorDTO.getCnpj());
             pstm.setString(4, objcolaboradorDTO.getEmail());
             pstm.setString(5, objcolaboradorDTO.getCep());
-            pstm.setString(6, objcolaboradorDTO.getEndereco());
-            pstm.setString(7, objcolaboradorDTO.getLogradouro());
-            pstm.setString(8, objcolaboradorDTO.getBairro());
-            pstm.setString(9, objcolaboradorDTO.getCidade());
-            pstm.setString(10, objcolaboradorDTO.getUf());
-            pstm.setString(11, objcolaboradorDTO.getTipoPessoa());
-            pstm.setInt(12, objcolaboradorDTO.getId());
+            pstm.setString(6, objcolaboradorDTO.getLogradouro());
+            pstm.setString(7, objcolaboradorDTO.getBairro());
+            pstm.setString(8, objcolaboradorDTO.getCidade());
+            pstm.setString(9, objcolaboradorDTO.getUf());
+            pstm.setString(10, objcolaboradorDTO.getTipoPessoa());
+            pstm.setInt(11, objcolaboradorDTO.getId());
 
             pstm.execute();
             pstm.close();
