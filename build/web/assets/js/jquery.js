@@ -1,6 +1,7 @@
 // Mostrar campo CPF ou CNPJ dependendo da escolha do tipo de pessoa
 
 $(document).ready(function () {
+
   $(".box").hide();
 
   $('input[type="radio"]').click(function () {
@@ -17,6 +18,21 @@ $(document).ready(function () {
       $("#cpf").removeAttr("required");
     }
   });
+});
+
+// Marcando radiobuttons no formEditarColaborador.jsp;
+
+$(document).ready(function(){
+
+  var cpfValue = $('.cpfEdit').val();
+  if (cpfValue != "") {
+      $("#pessoaFisica").prop("checked", true).change();
+      $('.boxcpf').show();      
+  } else {
+      $("#pessoaJuridica").prop("checked", true).change();
+      $('.boxcnpj').show();
+  };
+
 });
 
 // Requisição API viacep
@@ -90,3 +106,4 @@ $(document).ready(function () {
     $("#cpf").mask('000.000.000-00', {reverse: true});
     $("#cnpj").mask('00.000.000/0000-00', {reverse: true});
 });
+
