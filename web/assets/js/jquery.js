@@ -1,6 +1,7 @@
 // Mostrar campo CPF ou CNPJ dependendo da escolha do tipo de pessoa
 
 $(document).ready(function () {
+
   $(".box").hide();
 
   $('input[type="radio"]').click(function () {
@@ -18,6 +19,7 @@ $(document).ready(function () {
     }
   });
 });
+
 
 // Requisição API viacep
 
@@ -90,3 +92,4 @@ $(document).ready(function () {
     $("#cpf").mask('000.000.000-00', {reverse: true});
     $("#cnpj").mask('00.000.000/0000-00', {reverse: true});
 });
+

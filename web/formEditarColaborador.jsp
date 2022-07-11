@@ -106,17 +106,17 @@
                      </div>
                  </div>
 
-                 <div class="form-group row box">
+                 <div class="form-group row box boxcpf">
                      <label for="labelCPF" class="col-md-4 col-form-label text-md-right">CPF</label>
                      <div class="col-md-6">
-                         <input type="text" id="cpf" class="form-control" name="cpf" value="<%=request.getParameter("cpf")%>">
+                         <input type="text" id="cpf" class="form-control cpfEdit" name="cpf" value="<%=request.getParameter("cpf")%>">
                      </div>
                  </div>
 
-                 <div class="form-group row box">
+                 <div class="form-group row box boxcnpj">
                      <label for="labelCNPJ" class="col-md-4 col-form-label text-md-right">CNPJ</label>
                      <div class="col-md-6">
-                         <input type="text" id="cnpj" class="form-control" name="cnpj" value="<%=request.getParameter("cpnj")%>">
+                         <input type="text" id="cnpj" class="form-control" name="cnpj" value="<%=request.getParameter("cnpj")%>">
                      </div>
                  </div>
 
@@ -161,9 +161,14 @@
                  </div>
 
                  <div class="col-md-6 offset-md-4">
-                     <button type="submit" class="btn btn-primary">
+                      <button type="submit" class="btn btn-primary">
                          Editar
                      </button>
+  
+                      <a href="/CadastroColaboradores/ListarColaborador.jsp" class="btn btn-secondary">Cancelar</a>
+                      
+                </div>
+             </div>
                 </form>
               </div>
             </div>
@@ -174,5 +179,7 @@
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="./assets/js/jquery.js"></script>
+    <script defer src="./assets/js/jquery.mask.js"></script>
+    <script defer src="./assets/js/jquery_edit.js"></script>
   </body>
 </html>

@@ -180,5 +180,6 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="./assets/js/jquery.js"></script>
     <script defer src="./assets/js/jquery.mask.js"></script>
+    <script defer src="./assets/js/jquery_edit.js"></script>
   </body>
 </html>

@@ -1,18 +1,14 @@
-// Radio button na página formEditarColaborador.jsp
+// Marcando radiobuttons no formEditarColaborador.jsp;
 
 $(document).ready(function(){
 
-
-
-    var cpfValue = $('#cpf').val();
-
+    var cpfValue = $('.cpfEdit').val();
     if (cpfValue != "") {
         $("#pessoaFisica").prop("checked", true).change();
-        
+        $('.boxcpf').show();      
     } else {
         $("#pessoaJuridica").prop("checked", true).change();
+        $('.boxcnpj').show();
     };
-
-
-});
-
+  
+  });
