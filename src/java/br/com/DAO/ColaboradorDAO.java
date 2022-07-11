@@ -16,7 +16,7 @@ public class ColaboradorDAO {
 
     public void cadastrarColaborador(ColaboradorDTO objcolaboradorDTO) throws ClassNotFoundException {
         String sql = "insert into colaboradores "
-                + "(nome, cpf, cnpj, email, cep, endereco, logradouro, bairro, cidade, uf, tipoPessoa) "
+                + "(nome, cpf, cnpj, email, cep, endereco, logradouro, bairro, cidade, estado, tipoPessoa) "
                 + "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         conexao = new ConexaoDAO().conectaBD();
@@ -62,7 +62,7 @@ public class ColaboradorDAO {
                 objcolaboradorDTO.setLogradouro(rs.getString("logradouro"));
                 objcolaboradorDTO.setBairro(rs.getString("bairro"));
                 objcolaboradorDTO.setCidade(rs.getString("cidade"));
-                objcolaboradorDTO.setUf(rs.getString("uf"));
+                objcolaboradorDTO.setUf(rs.getString("estado"));
                 objcolaboradorDTO.setTipoPessoa(rs.getString("tipoPessoa"));
 
                 lista.add(objcolaboradorDTO);
@@ -76,7 +76,7 @@ public class ColaboradorDAO {
     
     public void EditarColaborador(ColaboradorDTO objcolaboradorDTO) throws ClassNotFoundException {
         
-        String sql = "update colaboradores set nome = ?, cpf = ?, cnpj = ?, email = ?, cep = ?, endereco = ?, logradouro = ?, bairro = ?, cidade = ?, uf = ?, tipoPessoa = ? where id = ?";
+        String sql = "update colaboradores set nome = ?, cpf = ?, cnpj = ?, email = ?, cep = ?, endereco = ?, logradouro = ?, bairro = ?, cidade = ?, estado = ?, tipoPessoa = ? where id = ?";
         
         conexao = new ConexaoDAO().conectaBD();
         

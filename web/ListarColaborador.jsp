@@ -1,7 +1,7 @@
 <%@page import="java.util.ArrayList" %>
 <%@page import="br.com.DTO.ColaboradorDTO" %>
 <%@page import="br.com.DAO.ColaboradorDAO" %>
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@page contentType="text/html" pageEncoding="utf-8" %>
 <!DOCTYPE html>
 <html>
 
@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet"
         type="text/css">
     <link href="assets/css/styles.css" type="stylesheet">
-    <link rel="icon" href="/web/assets/imgs/logo-nexum.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -51,8 +50,7 @@
                             <thead>
                                 <tr>
                                     <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>CNPJ</th>
+                                    <th>CPF ou CNPJ</th>
                                     <th>E-mail</th>
                                     <th>Cidade</th>
                                     <th>Estado</th>
@@ -69,13 +67,15 @@
                                     <% for (int num=0; num < lista.size(); num++) { %>
                                         <td>
                                             <%out.print(lista.get(num).getNome() + "</td>");
-                                                %>
+                                        %>
                                         <td>
-                                            <%out.print(lista.get(num).getCpf() + "</td>");
-                                                %>
-                                        <td>
-                                            <%out.print(lista.get(num).getCnpj() + "</td>");
-                                                %>
+                                            <%
+                                            if(lista.get(num).getCpf().equals("")) {
+                                                out.print(lista.get(num).getCnpj() + "</td>");
+                                            } else {
+                                                out.print(lista.get(num).getCpf() + "</td>");
+                                            }
+                                            %>
                                         <td>
                                             <%out.print(lista.get(num).getEmail() + "</td>");
                                                 %>
@@ -96,7 +96,7 @@
                             + lista.get(num).getEndereco()+ "&logradouro="
                             + lista.get(num).getLogradouro()+ "&bairro="
                             + lista.get(num).getBairro()+ "&cidade="
-                            + lista.get(num).getCidade()+ "&uf="
+                            + lista.get(num).getCidade()+ "&estado="
                             + lista.get(num).getUf() + "&tipoPessoa="
                             + lista.get(num).getTipoPessoa() + "'> Editar</a>" + "</td>");
                                         %><td>
@@ -110,7 +110,7 @@
                             + lista.get(num).getEndereco()+ "&logradouro="
                             + lista.get(num).getLogradouro()+ "&bairro="
                             + lista.get(num).getBairro()+ "&cidade="
-                            + lista.get(num).getCidade()+ "&uf="
+                            + lista.get(num).getCidade()+ "&estado="
                             + lista.get(num).getUf() + "&tipoPessoa="
                             + lista.get(num).getTipoPessoa() + "'> Excluir</a>" + "</td>");
                                         %>
@@ -118,11 +118,13 @@
                                 </tr>
                                 <%} } catch (Exception e) { } %>
 
-                                    <script
-                                        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-                                    <script
+                                            <!-- Adicionando JQuery -->
+                                    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
+                                    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+                                    crossorigin="anonymous"></script>
+                                    <script defer
                                         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-                                    <script
+                                    <script defer
                                         src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
                     </div>
                 </div>

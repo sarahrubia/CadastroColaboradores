@@ -11,7 +11,6 @@
       type="text/css"
     />
     <link href="assets/css/styles.css" type="stylesheet" />
-    <link rel="icon" href="/web/assets/imgs/logo-nexum.png" />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -128,14 +127,6 @@
                  </div>
 
                  <div class="form-group row">
-                     <label for="labelEndereco"
-                         class="col-md-4 col-form-label text-md-right">Endereço</label>
-                     <div class="col-md-6">
-                         <input type="text" id="endereco" class="form-control" name="endereco" value="<%=request.getParameter("endereco")%>" readonly>
-                     </div>
-                 </div>
-
-                 <div class="form-group row">
                      <label for="labelLogradouro"
                          class="col-md-4 col-form-label text-md-right">Logradouro</label>
                      <div class="col-md-6">
@@ -164,7 +155,7 @@
                      <label for="labelEstado"
                          class="col-md-4 col-form-label text-md-right">Estado</label>
                      <div class="col-md-6">
-                         <input type="text" id="estado" class="form-control" name="estado" readonly value="<%=request.getParameter("uf")%>">
+                         <input type="text" id="estado" class="form-control" name="estado" readonly value="<%=request.getParameter("estado")%>">
                      </div>
                  </div>
 

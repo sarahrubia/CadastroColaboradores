@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ExcluirLivro
-    Created on : 9 de jul de 2022, 18:44:53
-    Author     : sarah
---%>
-
 <%@page import="br.com.DAO.ColaboradorDAO"%>
 <%@page import="br.com.DTO.ColaboradorDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

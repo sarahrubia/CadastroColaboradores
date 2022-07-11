@@ -1,9 +1,3 @@
-<%-- 
-    Document   : EditarColaborador
-    Created on : 9 de jul de 2022, 19:20:43
-    Author     : sarah
---%>
-
 <%@page import="br.com.DAO.ColaboradorDAO"%>
 <%@page import="br.com.DTO.ColaboradorDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,6 +8,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+
         <%
             try {
                 ColaboradorDTO objcolaboradorDTO = new ColaboradorDTO();
@@ -27,7 +22,7 @@
                 objcolaboradorDTO.setLogradouro(request.getParameter("logradouro"));
                 objcolaboradorDTO.setBairro(request.getParameter("bairro"));
                 objcolaboradorDTO.setCidade(request.getParameter("cidade"));
-                objcolaboradorDTO.setUf(request.getParameter("uf"));
+                objcolaboradorDTO.setUf(request.getParameter("estado"));
                 objcolaboradorDTO.setTipoPessoa(request.getParameter("tipoPessoa"));
                 
 

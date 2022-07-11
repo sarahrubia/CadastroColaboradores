@@ -4,7 +4,7 @@ package br.com.DTO;
 public class ColaboradorDTO {
     
 
-    private String nome, cpf, cnpj, email, cep, endereco, logradouro, bairro, cidade, uf, tipoPessoa;
+    private String nome, cpf, cnpj, email, cep, endereco, logradouro, bairro, cidade, estado, tipoPessoa;
     private int id;
     
     public String getNome() {
@@ -80,11 +80,11 @@ public class ColaboradorDTO {
     }
 
     public String getUf() {
-        return uf;
+        return estado;
     }
 
-    public void setUf(String uf) {
-        this.uf = uf;
+    public void setUf(String estado) {
+        this.estado = estado;
     }
 
     public String getTipoPessoa() {
