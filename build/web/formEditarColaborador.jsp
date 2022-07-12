@@ -165,7 +165,7 @@
                          Editar
                      </button>
   
-                      <a href="/ListarColaborador.jsp" class="btn btn-secondary">Cancelar</a>
+                      <a href="/CadastroColaboradores/ListarColaborador.jsp" class="btn btn-secondary">Cancelar</a>
                       
                 </div>
              </div>
