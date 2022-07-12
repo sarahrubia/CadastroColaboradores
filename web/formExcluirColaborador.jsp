@@ -22,7 +22,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light navbar-java">
       <div class="container">
-        <a class="navbar-brand" href="/CadastroColaboradores/formVIEW.html"
+        <a class="navbar-brand" href="/CadastroColaboradores/"
           >Nexum Tecnologia</a
         >
         <button

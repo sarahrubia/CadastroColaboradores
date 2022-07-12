@@ -23,7 +23,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light navbar-java">
       <div class="container">
-        <a class="navbar-brand" href="/CadastroColaboradores/formVIEW.html"
+        <a class="navbar-brand" href="/CadastroColaboradores/"
           >Nexum Tecnologia</a
         >
         <button
@@ -43,7 +43,7 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="/CadastroColaboradores/ListarColaborador.jsp"
+                href="/ListarColaborador.jsp"
                 >Tabela de Colaboradores</a
               >
             </li>
@@ -165,7 +165,7 @@
                          Editar
                      </button>
   
-                      <a href="/CadastroColaboradores/ListarColaborador.jsp" class="btn btn-secondary">Cancelar</a>
+                      <a href="/ListarColaborador.jsp" class="btn btn-secondary">Cancelar</a>
                       
                 </div>
              </div>

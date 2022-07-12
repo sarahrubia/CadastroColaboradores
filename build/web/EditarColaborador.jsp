@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/CadastroColaboradores/formVIEW.html">Início</a>
+                            <a class="nav-link" href="/CadastroColaboradores/">Início</a>
                         </li>
                     </ul>
     
@@ -48,7 +48,7 @@
                         <div class="card-body">
                             <p>Selecione uma das opções para ser redirecionado:</p>
                             <a href="/CadastroColaboradores/ListarColaborador.jsp" class="btn btn-primary btn-lg">Lista de Colaboradores</a>
-                            <a href="/CadastroColaboradores/formVIEW.html" class="btn btn-secondary btn-lg">Cadastrar Colaborador</a>
+                            <a href="/CadastroColaboradores/" class="btn btn-secondary btn-lg">Cadastrar Colaborador</a>
                             </div>
                         </div>
                 </div>
