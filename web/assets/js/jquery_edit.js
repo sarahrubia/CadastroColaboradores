@@ -1,4 +1,4 @@
-// Marcando radiobuttons no formEditarColaborador.jsp;
+// Marcando radiobuttons no formEditarColaborador.jsp e no formExcluirColaborador.jsp;
 
 $(document).ready(function(){
 
