@@ -10,15 +10,16 @@ $(document).ready(function () {
     $(".box").not(targetBox).hide();
     $(targetBox).show();
 
-    if (inputValue == "PessoaFisica") {
+    if (inputValue === "PessoaFisica") {
       $("#cpf").attr("required", true);
       $("#cnpj").removeAttr("required");
-    } else if (inputValue == "PessoaJuridica") {
+    } else if (inputValue === "PessoaJuridica") {
       $("#cnpj").attr("required", true);
       $("#cpf").removeAttr("required");
     }
   });
 });
+
 
 
 // Requisição API viacep

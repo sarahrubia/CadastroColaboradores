@@ -73,7 +73,7 @@
                        <label for="labelNome" class="col-md-4 col-form-label text-md-right">Nome</label>
                        <div class="col-md-6">
                             <input type="text" class="form-control" name="nome"
-                              value="<%=request.getParameter("nome")%>">
+                              value="<%=request.getParameter("nome")%>" readonly>
                        </div>
                 </div>
 
@@ -81,7 +81,7 @@
                        <label for="labelEmail" class="col-md-4  col-form-label text-md-right">E-mail</label>
                        <div class="col-md-6">
                             <input class="form-control" type="text" name="email"
-                            value="<%=request.getParameter("email")%>">
+                            value="<%=request.getParameter("email")%>" readonly>
                        </div>
                 </div>
 
@@ -89,39 +89,39 @@
                      <legend class="col-md-4 col-form-label text-md-right">Tipo de Pessoa</legend>
                      <div class="cols-8">
                          <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" value="Pessoa Fisica" id="pessoaFisica"
+                             <input class="form-check-input" type="radio" value="PessoaFisica" id="pessoaFisica" disabled
                              name="<%=request.getParameter("tipoPessoa")%>">
                              <label for="labelPessoaFisica" class="form-check-label">Pessoa
                                  Física</label>
                          </div>
 
                          <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" value="Pessoa Juridica" 
-                                 id="pessoaJuridica" name="<%=request.getParameter("tipoPessoa")%>">
+                             <input class="form-check-input" type="radio" value="PessoaJuridica" 
+                                 id="pessoaJuridica" disabled name="<%=request.getParameter("tipoPessoa")%>">
                              <label for="labelPessoaJuridica" class="form-check-label">Pessoa
                                  Jurídica</label>
                          </div>
                      </div>
                  </div>
 
-                 <div class="form-group row">
+                 <div class="form-group row box boxcpf">
                      <label for="labelCPF" class="col-md-4 col-form-label text-md-right">CPF</label>
                      <div class="col-md-6">
-                         <input type="text" id="cpf" class="form-control" name="cpf" value="<%=request.getParameter("cpf")%>">
+                         <input type="text" id="cpf" class="form-control cpfEdit" name="cpf" readonly value="<%=request.getParameter("cpf")%>">
                      </div>
                  </div>
 
-                 <div class="form-group row">
-                     <label for="labelCNPJ" class="col-md-4 col-form-label text-md-right">CNPJ</label>
-                     <div class="col-md-6">
-                         <input type="text" id="cnpj" class="form-control" name="cnpj" value="<%=request.getParameter("cpnj")%>">
-                     </div>
-                 </div>
+                <div class="form-group row box boxcnpj">
+                  <label for="labelCNPJ" class="col-md-4 col-form-label text-md-right">CNPJ</label>
+                  <div class="col-md-6">
+                    <input type="text" id="cnpj" class="form-control" name="cnpj" readonly value="<%=request.getParameter("cnpj")%>">
+                  </div>
+                </div>
 
                  <div class="form-group row">
                      <label for="labelCEP" class="col-md-4 col-form-label text-md-right">CEP</label>
                      <div class="col-md-6">
-                         <input type="text" id="cep" class="form-control" name="cep" value="<%=request.getParameter("cep")%>">
+                         <input type="text" id="cep" class="form-control" name="cep" readonly value="<%=request.getParameter("cep")%>">
                      </div>
                  </div>
 
@@ -172,6 +172,10 @@
         </div>
       </div>
     </main>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="./assets/js/jquery.js"></script>
+    <script defer src="./assets/js/jquery_edit.js"></script>
   </body>
 </html>
 

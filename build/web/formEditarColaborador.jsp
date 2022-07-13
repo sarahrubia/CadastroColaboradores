@@ -91,7 +91,7 @@
                      <legend class="col-md-4 col-form-label text-md-right">Tipo de Pessoa</legend>
                      <div class="cols-8">
                          <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" value="PessoaFisica" id="pessoaFisica"
+                             <input class="form-check-input" type="radio" value="PessoaFisica" id="pessoaFisica" disabled
                              name="<%=request.getParameter("tipoPessoa")%>">
                              <label for="labelPessoaFisica" class="form-check-label">Pessoa
                                  Física</label>
@@ -99,7 +99,7 @@
 
                          <div class="form-check form-check-inline">
                              <input class="form-check-input" type="radio" value="PessoaJuridica" 
-                                 id="pessoaJuridica" name="<%=request.getParameter("tipoPessoa")%>">
+                                 id="pessoaJuridica" disabled name="<%=request.getParameter("tipoPessoa")%>">
                              <label for="labelPessoaJuridica" class="form-check-label">Pessoa
                                  Jurídica</label>
                          </div>

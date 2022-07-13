@@ -54,7 +54,7 @@
                                 <div class="form-group row">
                                     <label for="nome" class="col-md-4 col-form-label text-md-right">Nome</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="nome" class="form-control" name="nome" required>
+                                        <input type="text" id="nome" class="form-control" name="nome" pattern=".{5,}" required>
                                     </div>
                                 </div>
 
@@ -90,14 +90,14 @@
                                 <div class="form-group row PessoaFisica box">
                                     <label for="labelCPF" class="col-md-4 col-form-label text-md-right">CPF</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="cpf" class="form-control" name="cpf" pattern=".{14}" title="Insira os 11 dígitos do seu CPF">
+                                        <input type="text" id="cpf" class="form-control" name="cpf" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="Insira os 11 dígitos do seu CPF">
                                     </div>
                                 </div>
 
                                 <div class="form-group row PessoaJuridica box">
                                     <label for="labelCNPJ" class="col-md-4 col-form-label text-md-right">CNPJ</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="cnpj" class="form-control" name="cnpj" pattern=".{18}" title="Insira os 14 dígitos do CNPJ">
+                                        <input type="text" id="cnpj" class="form-control" name="cnpj" pattern="\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" title="Insira os 14 dígitos do CNPJ">
                                     </div>
                                 </div>
 

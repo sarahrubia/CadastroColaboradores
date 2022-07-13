@@ -3,7 +3,7 @@
 $(document).ready(function(){
 
     var cpfValue = $('.cpfEdit').val();
-    if (cpfValue != "") {
+    if (cpfValue !== "") {
         $("#pessoaFisica").prop("checked", true).change();
         $('.boxcpf').show();      
     } else {
