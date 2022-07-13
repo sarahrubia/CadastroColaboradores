@@ -16,8 +16,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     />
-    <title>Tabela de Colaboradores</title>
-    <title>Editar Colaborador</title>
+    <title>Alteração de Cadastro de Colaborador</title>
   </head>
 
   <body>
