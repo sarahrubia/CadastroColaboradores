@@ -71,7 +71,6 @@
                     objcolaboradorDTO.setUf(request.getParameter("estado"));
                     objcolaboradorDTO.setTipoPessoa(request.getParameter("tipoPessoa"));
                     
-                    System.out.println(request.getParameter("cep"));
                     ColaboradorDAO objcolaboradorDAO = new ColaboradorDAO();
                     objcolaboradorDAO.cadastrarColaborador(objcolaboradorDTO);
                     } catch (Exception e) {
